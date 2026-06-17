@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio for <<YOUR FULL NAME>>, a Monash University student focused on data analytics and software development.">
+  <meta name="theme-color" content="#0f766e">
+  <title><<YOUR FULL NAME>> | Data Analytics & Software</title>
+
+  <meta property="og:title" content="<<YOUR FULL NAME>> | Data Analytics & Software">
+  <meta property="og:description" content="Projects in data analytics, text mining, visualisation, and software development.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/fit3152-bipartite-network.png">
+  <meta property="og:url" content="https://<<USERNAME>>.github.io">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <span class="brand-mark" aria-hidden="true">YP</span>
+        <span>&lt;&lt;YOUR FULL NAME&gt;&gt;</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Melbourne, Australia</p>
+        <h1 id="hero-title">&lt;&lt;YOUR FULL NAME&gt;&gt;</h1>
+        <p class="tagline">Data Analytics &amp; Software</p>
+        <p class="intro">Monash University student working in data analytics and software development. I turn messy text and data into clear, decision-ready insight and visualisations.</p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary" href="<<https://github.com/USERNAME>>" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="<<https://linkedin.com/in/...>>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+        <p class="placeholder-note">Replace public links: &lt;&lt;https://github.com/USERNAME&gt;&gt; · &lt;&lt;https://linkedin.com/in/...&gt;&gt; · resume at <code>assets/resume.pdf</code></p>
+      </div>
+      <div class="hero-panel" aria-label="Portfolio summary">
+        <div class="metric-card">
+          <span class="metric-number">23</span>
+          <span class="metric-label">documents analysed</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">3</span>
+          <span class="metric-label">network views</span>
+        </div>
+        <div class="metric-card wide">
+          <span class="metric-number">Insight</span>
+          <span class="metric-label">from text, data, and visual structure</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="projects-title">Projects</h2>
+        <p>Research-style analytics and software projects, written up for readers who want the result and the reasoning.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <img src="assets/images/fit3152-bipartite-network.png" alt="Bipartite document-token network visualisation for the FIT3152 text analytics project." loading="lazy">
+          <div class="card-body">
+            <p class="project-kicker">Text mining + networks</p>
+            <h3>Text Analytics of Australia's Energy Sector</h3>
+            <p>An R text-mining pipeline over 23 documents from four source genres (Commentary, Industry, Media release, News), turning raw text into clustering, sentiment, and network insight.</p>
+            <ul class="highlights">
+              <li>Built a Document-Term Matrix with custom preprocessing (domain phrase merging, stemming, sparsity pruning) reduced to ~25 key tokens.</li>
+              <li>Cosine-distance + Ward.D hierarchical clustering of documents (k=4), evaluated by cluster purity (~52%).</li>
+              <li>Loughran-McDonald sentiment analysis by genre with Kruskal-Wallis and pairwise t-tests.</li>
+              <li>Three network visualisations built with ggraph: a single-mode document similarity network, a token co-occurrence network (fast-greedy communities), and a bipartite document-token network with edges coloured by document genre and tokens shaded by document frequency.</li>
+            </ul>
+            <div class="tag-list" aria-label="Technologies used">
+              <span>R</span>
+              <span>tm</span>
+              <span>igraph</span>
+              <span>ggraph</span>
+              <span>SentimentAnalysis</span>
+              <span>proxy</span>
+              <span>hierarchical clustering</span>
+            </div>
+            <div class="card-links">
+              <a href="<<url>>" target="_blank" rel="noopener noreferrer">Report PDF</a>
+              <a href="<<url>>" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p class="placeholder-note">Replace project links: &lt;&lt;url&gt;&gt; for Report PDF and GitHub repo.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/project2.png" alt="Placeholder screenshot for project 2." loading="lazy">
+          <div class="card-body">
+            <p class="project-kicker">Placeholder</p>
+            <h3>&lt;&lt;PROJECT 2 TITLE&gt;&gt;</h3>
+            <p>&lt;&lt;PROJECT 2 SUMMARY&gt;&gt;</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+            </div>
+            <div class="card-links">
+              <a href="<<PROJECT 2 LIVE OR REPORT URL>>" target="_blank" rel="noopener noreferrer">Live / Report</a>
+              <a href="<<PROJECT 2 GITHUB URL>>" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p class="placeholder-note">Replace links: &lt;&lt;PROJECT 2 LIVE OR REPORT URL&gt;&gt; · &lt;&lt;PROJECT 2 GITHUB URL&gt;&gt;</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/project3.png" alt="Placeholder screenshot for project 3." loading="lazy">
+          <div class="card-body">
+            <p class="project-kicker">Placeholder</p>
+            <h3>&lt;&lt;PROJECT 3 TITLE&gt;&gt;</h3>
+            <p>&lt;&lt;PROJECT 3 SUMMARY&gt;&gt;</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+              <span>&lt;&lt;TECH&gt;&gt;</span>
+            </div>
+            <div class="card-links">
+              <a href="<<PROJECT 3 LIVE OR REPORT URL>>" target="_blank" rel="noopener noreferrer">Live / Report</a>
+              <a href="<<PROJECT 3 GITHUB URL>>" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p class="placeholder-note">Replace links: &lt;&lt;PROJECT 3 LIVE OR REPORT URL&gt;&gt; · &lt;&lt;PROJECT 3 GITHUB URL&gt;&gt;</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">A data-minded builder.</h2>
+      </div>
+      <div class="about-copy">
+        <p>&lt;&lt;2-3 sentences: who I am, what I focus on, what I'm looking for.&gt;&gt;</p>
+        <p>I am especially interested in practical analytics workflows: cleaning messy inputs, building transparent models, and communicating results through clear visuals and readable reports.</p>
+
+        <div class="skills">
+          <div>
+            <h3>Languages</h3>
+            <div class="tag-list">
+              <span>R</span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <div>
+            <h3>Data / ML</h3>
+            <div class="tag-list">
+              <span>text mining</span>
+              <span>clustering</span>
+              <span>sentiment analysis</span>
+              <span>data visualisation</span>
+            </div>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <div class="tag-list">
+              <span>Git</span>
+              <span>RStudio</span>
+              <span>ggplot2 / ggraph</span>
+              <span>pandas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Let's connect.</h2>
+      <p>If my work looks relevant to your team, project, or internship opportunity, I would be glad to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:<<your-email>>">&lt;&lt;your-email&gt;&gt;</a>
+        <a href="<<https://github.com/USERNAME>>" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="<<https://linkedin.com/in/...>>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p class="placeholder-note">Replace contact details: &lt;&lt;your-email&gt;&gt; · &lt;&lt;https://github.com/USERNAME&gt;&gt; · &lt;&lt;https://linkedin.com/in/...&gt;&gt;</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> &lt;&lt;YOUR FULL NAME&gt;&gt;. Built with HTML, CSS, and vanilla JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
