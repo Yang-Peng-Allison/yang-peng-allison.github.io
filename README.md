@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Yang Peng Portfolio Website
 
 Static single-page portfolio for GitHub Pages. It uses only HTML, CSS, and vanilla JavaScript, so there is no build step and nothing to install.
 
@@ -8,7 +8,8 @@ Static single-page portfolio for GitHub Pages. It uses only HTML, CSS, and vanil
 - `styles.css` contains the responsive layout, theme, card styling, and accessibility states.
 - `script.js` contains the mobile navigation toggle, light/dark theme toggle, and footer year.
 - `assets/images/` contains project screenshots.
-- `assets/resume.pdf` is a placeholder resume file. Replace it with your real PDF.
+- `assets/resume.pdf` is the resume PDF linked from the hero section.
+- `assets/reports/` contains portfolio report deliverables linked from project cards.
 - `favicon.svg` is the site icon.
 
 ## Deploy To GitHub Pages
@@ -33,10 +34,10 @@ git push -u origin main
 
 ## What To Edit First
 
-- In `index.html`, replace `<<YOUR FULL NAME>>`, `<<https://github.com/USERNAME>>`, `<<https://linkedin.com/in/...>>`, `<<your-email>>`, project links, and the About placeholder.
-- In `favicon.svg`, replace `YP` with your initials.
-- In `assets/resume.pdf`, replace the placeholder with your real resume using the same filename.
-- In `assets/images/`, replace `project2.png` and `project3.png` with real screenshots when you add those projects.
+- In `index.html`, replace `<<LINKEDIN URL>>` with your public LinkedIn profile URL.
+- In `index.html`, edit project cards if you want different wording, links, or ordering.
+- In `assets/resume.pdf`, replace the resume with a newer version using the same filename when needed.
+- In `assets/images/`, replace or add screenshots when you update projects.
 - In `index.html`, update the `og:url` and `og:image` metadata if you want a different link preview image.
 
 ## Add A New Project Card
