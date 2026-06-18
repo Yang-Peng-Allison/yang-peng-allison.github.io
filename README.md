@@ -23,7 +23,7 @@ git init
 git add .
 git commit -m "Initial portfolio"
 git branch -M main
-git remote add origin https://github.com/Yang-Peng-Allison/yang-peng-allison.github.io.git
+git remote add origin <repo-url>
 git push -u origin main
 ```
 
