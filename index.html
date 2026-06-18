@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Yang Peng portfolio: data analytics, business analysis, software projects, research reports, and human-centred digital solutions.">
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#0e7c72">
   <title>Yang Peng | Data Analytics & Software</title>
 
   <meta property="og:title" content="Yang Peng | Data Analytics & Software">
@@ -16,8 +16,20 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Resolve theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var stored = localStorage.getItem("portfolio-theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,14 +52,23 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+          <span class="sr-only">Toggle dark theme</span>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero section" id="top" aria-labelledby="hero-title">
-      <div class="hero-content">
+      <div class="hero-content reveal">
         <p class="eyebrow">Melbourne, Australia</p>
         <h1 id="hero-title">Yang Peng</h1>
         <p class="tagline">Data Analytics &amp; Software</p>
@@ -58,27 +79,32 @@
           <a class="button secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
-      <div class="hero-panel" aria-label="Portfolio summary">
-        <div class="metric-card">
-          <span class="metric-number">7</span>
-          <span class="metric-label">portfolio projects</span>
+      <aside class="hero-panel reveal" aria-label="Portfolio at a glance">
+        <p class="panel-axis">portfolio.summary</p>
+        <div class="panel-figure">
+          <span class="figure-value">07</span>
+          <span class="figure-label">selected projects</span>
         </div>
-        <div class="metric-card wide">
-          <span class="metric-number">Insight</span>
-          <span class="metric-label">from analytics, finance, user research and software delivery</span>
-        </div>
-      </div>
+        <hr class="panel-rule">
+        <p class="panel-axis">focus areas</p>
+        <ul class="legend">
+          <li><span class="legend-dot" data-series="1" aria-hidden="true"></span>Data analytics &amp; machine learning</li>
+          <li><span class="legend-dot" data-series="2" aria-hidden="true"></span>Business &amp; financial analysis</li>
+          <li><span class="legend-dot" data-series="3" aria-hidden="true"></span>UI/UX &amp; human-centred design</li>
+          <li><span class="legend-dot" data-series="4" aria-hidden="true"></span>Full-stack &amp; IoT software</li>
+        </ul>
+      </aside>
     </section>
 
     <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Selected work</p>
         <h2 id="projects-title">Projects</h2>
         <p>Coursework, industry experience and prototype projects drawn from the work files on this machine. Report links point only to my own deliverables, not assignment specifications or lecture materials.</p>
       </div>
 
       <div class="project-grid">
-        <article class="project-card featured">
+        <article class="project-card featured reveal">
           <img src="assets/images/fit3152-text-analysis.png" alt="Cover page of the FIT3152 text analytics and network analysis report." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">FIT3152 · Text mining + networks</p>
@@ -104,7 +130,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <img src="assets/images/fit3152-social-confidence.png" alt="Cover page of the FIT3152 Social Confidence classification report." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">FIT3152 · Machine learning</p>
@@ -128,7 +154,7 @@
           </div>
         </article>
 
-        <article class="project-card featured">
+        <article class="project-card featured reveal">
           <img src="assets/images/fit2095-recipe-hub.svg" alt="Recipe Hub full-stack application overview showing Angular, Express, MongoDB, Socket.IO and AI service features." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">FIT2095 · Full-stack web app</p>
@@ -154,7 +180,7 @@
           </div>
         </article>
 
-        <article class="project-card featured">
+        <article class="project-card featured reveal">
           <img src="assets/images/bex3000-nextdc-report.png" alt="Cover page of the NEXTDC finance operations and strategy research report." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">BEX3000 · Research report</p>
@@ -179,7 +205,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <img src="assets/images/fit3047-health-app.png" alt="Health support application interface graphic from the FIT3047 team project." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">FIT3047 · Industry experience</p>
@@ -201,7 +227,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <img src="assets/images/fit3146-memoryjar.svg" alt="MemoryJar audio device concept showing fingerprint verification, lid sensor, speaker, LED and ESP32 components." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">FIT3146 · IoT prototype</p>
@@ -226,7 +252,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <img src="assets/images/fit3146-portfolio.png" alt="Cover page of Yang Peng's FIT3146 Maker Lab portfolio." loading="lazy">
           <div class="card-body">
             <p class="project-kicker">Maker Lab · Portfolio</p>
@@ -252,11 +278,11 @@
     </section>
 
     <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div>
+      <div class="reveal">
         <p class="eyebrow">About</p>
         <h2 id="about-title">A data-minded business technologist.</h2>
       </div>
-      <div class="about-copy">
+      <div class="about-copy reveal">
         <p>I am a final-year Bachelor of Business and Information Technology student at Monash University, majoring in Banking and Finance and Business Information Systems. My work combines business analysis, stakeholder engagement, requirements gathering and data-driven problem solving.</p>
         <p>I am particularly interested in business analysis, renewable energy, digital transformation and analytics roles where I can connect commercial context with practical technical delivery.</p>
 
@@ -306,7 +332,7 @@
       </div>
     </section>
 
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+    <section class="section contact-section reveal" id="contact" aria-labelledby="contact-title">
       <p class="eyebrow">Contact</p>
       <h2 id="contact-title">Let's connect.</h2>
       <p>If my work looks relevant to your team, project, internship or graduate opportunity, I would be glad to hear from you.</p>
