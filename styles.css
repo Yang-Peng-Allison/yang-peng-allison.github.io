@@ -161,7 +161,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-display);
   font-weight: 700;
 }
@@ -183,6 +184,12 @@ h2 {
 }
 
 h3 {
+  font-size: 1.24rem;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+
+h4 {
   font-size: 1.24rem;
   letter-spacing: -0.012em;
   line-height: 1.25;
@@ -416,6 +423,18 @@ h3 {
   color: var(--accent-strong);
 }
 
+.button.record-button {
+  border: 1px solid color-mix(in srgb, var(--signal), var(--border) 30%);
+  background: var(--signal);
+  box-shadow: var(--shadow-soft);
+  color: #fff;
+}
+
+.button.record-button:hover {
+  background: color-mix(in srgb, var(--signal), #000 12%);
+  border-color: color-mix(in srgb, var(--signal), #000 12%);
+}
+
 /* ---------- Hero data panel (signature: plotting grid) ---------- */
 .hero-panel {
   position: relative;
@@ -482,6 +501,34 @@ h3 {
   margin: 1.5rem 0;
 }
 
+.panel-proof {
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--signal), var(--border) 35%);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--signal), transparent 88%);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  padding: 0.8rem 0.9rem;
+  text-decoration: none;
+}
+
+.panel-proof span {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel-proof strong {
+  color: var(--signal);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .legend {
   display: grid;
   gap: 0.7rem;
@@ -506,16 +553,60 @@ h3 {
   width: 11px;
 }
 
-.legend-dot[data-series="1"] { background: var(--series-1); }
-.legend-dot[data-series="2"] { background: var(--series-2); }
-.legend-dot[data-series="3"] { background: var(--series-3); }
-.legend-dot[data-series="4"] { background: var(--series-4); }
+.legend-dot[data-series="1"],
+.group-dot[data-series="1"] { background: var(--series-1); }
+.legend-dot[data-series="2"],
+.group-dot[data-series="2"] { background: var(--series-2); }
+.legend-dot[data-series="3"],
+.group-dot[data-series="3"] { background: var(--series-3); }
+.legend-dot[data-series="4"],
+.group-dot[data-series="4"] { background: var(--series-4); }
 
 /* ---------- Projects ---------- */
+.project-groups {
+  display: grid;
+  gap: 2.75rem;
+}
+
+.project-group + .project-group {
+  border-top: 1px solid var(--border);
+  padding-top: 2.75rem;
+}
+
+.group-head {
+  align-items: center;
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.group-dot {
+  border-radius: 3px;
+  flex: none;
+  height: 12px;
+  width: 12px;
+}
+
+.group-title {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.group-count {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
 .project-grid {
   display: grid;
   gap: 1.4rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card {
@@ -535,8 +626,27 @@ h3 {
   transform: translateY(-5px);
 }
 
-.project-card.featured {
-  grid-column: span 2;
+.project-card.wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 721px) {
+  .project-card.wide {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .project-card.wide img {
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-right: 1px solid var(--border);
+    max-width: 440px;
+    width: 40%;
+  }
+
+  .project-card.wide .card-body {
+    flex: 1;
+  }
 }
 
 .project-card img {
@@ -564,7 +674,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.project-card h3 {
+.project-card h4 {
   margin-bottom: 0.6rem;
 }
 
@@ -649,6 +759,96 @@ h3 {
   text-transform: uppercase;
 }
 
+/* ---------- Academic record ---------- */
+.academic-record-section {
+  align-items: center;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.academic-record-copy p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  max-width: 62ch;
+}
+
+.academic-record-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.8rem;
+}
+
+.academic-record-card {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--accent), var(--border) 35%);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent), transparent 88%), transparent 58%),
+    var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+}
+
+.record-card-head {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.record-label,
+.record-chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.record-label {
+  color: var(--accent-strong);
+}
+
+.record-chip {
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 0.34rem 0.5rem;
+}
+
+.academic-record-preview {
+  border: 0;
+  background: var(--surface-2);
+  height: min(58vh, 620px);
+  min-height: 420px;
+  width: 100%;
+}
+
+.record-open-link {
+  align-items: center;
+  border-top: 1px solid var(--border);
+  color: var(--accent-strong);
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 50px;
+  text-decoration: none;
+}
+
+.record-open-link:hover {
+  background: color-mix(in srgb, var(--accent), transparent 92%);
+}
+
 /* ---------- Contact ---------- */
 .contact-section {
   position: relative;
@@ -695,6 +895,7 @@ h3 {
 @media (max-width: 960px) {
   .hero,
   .about-section,
+  .academic-record-section,
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -703,7 +904,7 @@ h3 {
     min-height: auto;
   }
 
-  .project-card.featured {
+  .project-card.wide {
     grid-column: auto;
   }
 }
@@ -777,8 +978,14 @@ h3 {
 
   .button,
   .card-links a,
-  .contact-links a {
+  .contact-links a,
+  .academic-record-actions .button {
     width: 100%;
+  }
+
+  .academic-record-preview {
+    height: 440px;
+    min-height: 360px;
   }
 }
 

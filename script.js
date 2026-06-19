@@ -58,6 +58,13 @@ const reveals = document.querySelectorAll(".reveal");
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
+const hashTarget = window.location.hash
+  ? document.querySelector(window.location.hash)
+  : null;
+
+if (hashTarget && hashTarget.classList.contains("reveal")) {
+  hashTarget.classList.add("is-visible");
+}
 
 if (reveals.length && "IntersectionObserver" in window && !prefersReducedMotion) {
   const observer = new IntersectionObserver(
