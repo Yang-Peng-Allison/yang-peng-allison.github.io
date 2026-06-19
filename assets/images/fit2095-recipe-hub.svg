@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
-  <title id="title">Recipe Hub full-stack application overview</title>
-  <desc id="desc">A portfolio graphic summarising an Angular, Express, MongoDB, Socket.IO and AI services recipe-management application.</desc>
+  <title id="title">Recipe Hub full-stack website overview</title>
+  <desc id="desc">A portfolio graphic summarising an Angular, Express, MongoDB, Socket.IO and AI services recipe-management website, installable as a PWA.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0%" stop-color="#f0fdfa"/>
@@ -22,8 +22,13 @@
   <text x="270" y="126" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Recipe Hub</text>
   <text x="918" y="126" fill="#ccfbf1" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">FIT2095 Full Stack</text>
 
-  <text x="126" y="228" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Meal planning app</text>
+  <text x="126" y="228" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Meal planning website</text>
   <text x="126" y="268" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="22">Authenticated recipe and inventory workflows with AI-assisted features.</text>
+  <g>
+    <rect x="126" y="286" width="196" height="34" rx="17" fill="#0f766e" opacity="0.12"/>
+    <circle cx="148" cy="303" r="5" fill="#0f766e"/>
+    <text x="162" y="309" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Installable PWA</text>
+  </g>
 
   <g font-family="Inter, Arial, sans-serif">
     <rect x="126" y="326" width="260" height="172" rx="26" fill="#ecfeff" stroke="#99f6e4"/>
