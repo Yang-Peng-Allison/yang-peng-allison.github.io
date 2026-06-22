@@ -249,7 +249,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: none;
   min-height: 72px;
   padding: 0 1.25rem;
 }
