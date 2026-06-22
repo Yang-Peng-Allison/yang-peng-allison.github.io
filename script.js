@@ -51,6 +51,20 @@ if (navToggle && navMenu) {
   });
 }
 
+// --- Analytics events ----------------------------------------------------
+// Page views are handled by the GA4 tag. Track PDF-open intent separately
+// because GitHub Pages cannot tell whether an opened PDF was later downloaded.
+document.querySelectorAll('a[href$=".pdf"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof window.gtag !== "function") return;
+    const documentName = link.getAttribute("href").split("/").pop();
+    window.gtag("event", link.dataset.analyticsEvent || "document_open", {
+      document_name: documentName,
+      document_url: link.href
+    });
+  });
+});
+
 // --- Scroll reveal -------------------------------------------------------
 // Progressive enhancement: elements start hidden only when JS + motion are
 // available. If reduced motion is requested, reveal everything immediately.

@@ -21,6 +21,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYS3EPQY3X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-NYS3EPQY3X");
+  </script>
+
   <script>
     // Resolve theme before first paint to avoid a flash.
     (function () {
@@ -172,7 +181,7 @@
         <p>Please find attached my Monash University academic record, exported directly from the University's official Web Enrolment System (WES). Please note that this is an unofficial version, provided for initial reference.</p>
         <p>Should you require an official certified transcript at any stage, I can request one from Monash immediately and have it sent to you directly. My degree is a Bachelor of Business and Information Technology, with majors in Banking and Finance and Business Information Systems, Student ID 33235422, available for verification.</p>
         <div class="academic-record-actions" aria-label="Academic record links">
-          <a class="button primary" href="assets/academic_record.pdf" target="_blank" rel="noopener noreferrer">Open Unofficial Record</a>
+          <a class="button primary" href="assets/academic_record.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="academic_record_open">Open Unofficial Record</a>
           <a class="button secondary" href="assets/YANG_PENG_RESUME.pdf" target="_blank" rel="noopener noreferrer">Open Resume</a>
         </div>
       </div>
@@ -182,7 +191,7 @@
           <span class="record-chip">Unofficial</span>
         </div>
         <iframe class="academic-record-preview" src="assets/academic_record.pdf#toolbar=0&navpanes=0" title="Yang Peng unofficial academic record PDF preview"></iframe>
-        <a class="record-open-link" href="assets/academic_record.pdf" target="_blank" rel="noopener noreferrer">Open full PDF</a>
+        <a class="record-open-link" href="assets/academic_record.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="academic_record_open">Open full PDF</a>
       </article>
     </section>
 
